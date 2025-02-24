@@ -1,4 +1,4 @@
-package Notificacao;
+package Services;
 
 public class notificacao  {
     private final ComunicacaoService comunicacaoService;

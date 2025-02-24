@@ -1,4 +1,4 @@
-package Notificacao;
+package Services;
 
 public interface ComunicacaoService {
     void sendMenssage(String mensagem);

@@ -1,3 +1,5 @@
+package Model;
+
 class Cliente {
     private String nome;
     private String documento;
@@ -25,6 +27,6 @@ class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{nome='" + nome + "', documento='" + documento + "'}";
+        return "Model.Cliente{nome='" + nome + "', documento='" + documento + "'}";
     }
 }

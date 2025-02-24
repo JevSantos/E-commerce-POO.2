@@ -1,4 +1,4 @@
-package Notificacao;
+package Services;
 
 public class Whatsapp implements ComunicacaoService{
 
