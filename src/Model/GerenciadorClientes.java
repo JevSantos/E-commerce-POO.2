@@ -12,7 +12,7 @@ class GerenciadorClientes {
     }
 
     public void cadastrar(String nome, String documento) {
-        Cliente cliente = new Cliente(nome, documento);
+        Cliente cliente = new Cliente(nome);
         clientes.add(cliente);
         System.out.println("Model.Cliente cadastrado: " + cliente);
     }
