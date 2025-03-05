@@ -1,4 +1,6 @@
-package Model;
+package Model.Pagamento;
+
+import Model.Pedido.StatusPedido;
 
 import java.time.LocalDate;
 import java.util.UUID;

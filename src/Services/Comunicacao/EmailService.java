@@ -1,4 +1,4 @@
-package Services;
+package Services.Comunicacao;
 
 public class EmailService implements ComunicacaoService {
 

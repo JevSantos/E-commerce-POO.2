@@ -1,4 +1,4 @@
-package Model;
+package Model.Cliente;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ class GerenciadorClientes {
     public void cadastrar(String nome, String documento) {
         Cliente cliente = new Cliente(nome);
         clientes.add(cliente);
-        System.out.println("Model.Cliente cadastrado: " + cliente);
+        System.out.println("Model.Cliente.Cliente cadastrado: " + cliente);
     }
 
     public void listar() {
@@ -31,10 +31,10 @@ class GerenciadorClientes {
             if (cliente.getDocumento().equals(documento)) {
                 cliente.setNome(novoNome);
                 cliente.setDocumento(novoDocumento);
-                System.out.println("Model.Cliente atualizado: " + cliente);
+                System.out.println("Model.Cliente.Cliente atualizado: " + cliente);
                 return;
             }
         }
-        System.out.println("Model.Cliente com documento " + documento + " não encontrado.");
+        System.out.println("Model.Cliente.Cliente com documento " + documento + " não encontrado.");
     }
 }

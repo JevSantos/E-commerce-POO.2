@@ -1,4 +1,4 @@
-package Services;
+package Services.Pedidos;
 
 public class GerenciadorDePedidos {
 

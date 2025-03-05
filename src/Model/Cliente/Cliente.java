@@ -1,12 +1,12 @@
-package Model;
+package Model.Cliente;
 
-class Cliente {
+public class Cliente {
     private String nome;
     private String documento;
 
     public Cliente(String nome) {
         this.nome = nome;
-        this.documento = documento;
+        //this.documento = documento;
     }
 
     public String getNome() {
@@ -27,6 +27,6 @@ class Cliente {
 
     @Override
     public String toString() {
-        return "Model.Cliente{nome='" + nome + "', documento='" + documento + "'}";
+        return "Model.Cliente.Cliente{nome='" + nome + "', documento='" + documento + "'}";
     }
 }
