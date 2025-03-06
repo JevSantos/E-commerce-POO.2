@@ -1,4 +1,6 @@
-package Model;
+package Model.Pagamento;
+
+import Model.Cliente.Cliente;
 
 import java.time.LocalDate;
 
