@@ -11,30 +11,37 @@ class GerenciadorClientes {
         this.clientes = new ArrayList<>();
     }
 
-    public void cadastrar(String nome, String documento) {
-        Cliente cliente = new Cliente(nome);
+    public void cadastrar(String nome, String documento, String email, String telefone) {
+        Cliente cliente = new Cliente(nome, documento, email, telefone);
         clientes.add(cliente);
-        System.out.println("Model.Cliente.Cliente cadastrado: " + cliente);
+        System.out.println("Cliente cadastrado: " + cliente);
     }
 
-    public void listar() {
-        if (clientes.isEmpty()) {
-            System.out.println("Nenhum cliente cadastrado.");
+    public void listarClientes() {
+        if (clientes == null || clientes.isEmpty()) {
+            System.out.println("\n Não há clientes registrados no sistema.");
         } else {
-            System.out.println("Lista de clientes:");
-            clientes.forEach(System.out::println);
+            System.out.println("\n Lista de Clientes:");
+            System.out.println("------------------------------");
+            int index = 1;
+            for (Cliente cliente : clientes) {
+                System.out.println(index++ + ". " + cliente);
+            }
+            System.out.println("------------------------------\n");
         }
     }
 
-    public void atualizar(String documento, String novoNome, String novoDocumento) {
+    public void atualizar(String documento, String novoNome, String novoDocumento, String novoEmail, String novoTelefone) {
         for (Cliente cliente : clientes) {
-            if (cliente.getDocumento().equals(documento)) {
+            if (documento.equals(cliente.getDocumento())) {
                 cliente.setNome(novoNome);
                 cliente.setDocumento(novoDocumento);
-                System.out.println("Model.Cliente.Cliente atualizado: " + cliente);
+                cliente.setEmail(novoEmail);
+                cliente.setTelefone(novoTelefone);
+                System.out.println("Cliente atualizado: " + cliente);
                 return;
             }
         }
-        System.out.println("Model.Cliente.Cliente com documento " + documento + " não encontrado.");
+        System.out.println("Cliente com documento " + documento + " não encontrado.");
     }
 }
